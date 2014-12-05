@@ -1,7 +1,10 @@
 package com.cmpe.project.controller;
+<<<<<<< HEAD
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
+=======
+>>>>>>> 952d5dd83e003ed5a0d141636b6b330b8eda3aed
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.data.mongodb.core.MongoOperations;
@@ -14,8 +17,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+<<<<<<< HEAD
 import syncdata.FBDBController;
 
+=======
+>>>>>>> 952d5dd83e003ed5a0d141636b6b330b8eda3aed
 import com.SpringConfig;
 import com.cmpe.project.to.LoginTO;
 import com.cmpe.project.to.RegistrationBean;
@@ -23,8 +29,11 @@ import com.mongodb.BasicDBObject;
 import com.mongodb.DBCollection;
 import com.mongodb.DBCursor;
 
+<<<<<<< HEAD
 import facebook4j.FacebookException;
 
+=======
+>>>>>>> 952d5dd83e003ed5a0d141636b6b330b8eda3aed
 @RestController
 public class LoginController
 {
@@ -39,6 +48,7 @@ MongoOperations mongoOperation =
 	
 	@RequestMapping(value="/LoginController1", method=RequestMethod.POST)
 	@ResponseBody
+<<<<<<< HEAD
 	public RegistrationBean createUser(@RequestBody RegistrationBean RBean) throws NoSuchAlgorithmException{
 		
 		
@@ -53,6 +63,12 @@ MongoOperations mongoOperation =
        }
        RBean.setPassword(sb.toString());
        System.out.println(RBean.getPassword());
+=======
+	public RegistrationBean createUser(@RequestBody RegistrationBean RBean){
+		
+		
+		System.out.println("in controller");
+>>>>>>> 952d5dd83e003ed5a0d141636b6b330b8eda3aed
 		mongoOperation.save(RBean);
 		
 		return RBean;
@@ -61,7 +77,11 @@ MongoOperations mongoOperation =
 	
 	@RequestMapping(value="/userlogin",method=RequestMethod.POST)
 	@ResponseBody
+<<<<<<< HEAD
 	public Object loginuser(@RequestBody LoginTO user) throws NoSuchAlgorithmException{
+=======
+	public Object loginuser(@RequestBody LoginTO user){
+>>>>>>> 952d5dd83e003ed5a0d141636b6b330b8eda3aed
 		/*System.out.println("here in post post of user");
 		String user_name=user.getUsername();
 		System.out.println(user_name);
@@ -71,6 +91,7 @@ MongoOperations mongoOperation =
 		if(user1!=null) 
 		{System.out.println(user.getUsername());
 		}
+<<<<<<< HEAD
 		return user*/
 		RegistrationBean RBean=new RegistrationBean();
 		String user_name=user.getUsername();
@@ -82,6 +103,10 @@ MongoOperations mongoOperation =
        for (int i = 0; i < bytes.length; i++) {
               sb.append(Integer.toString((bytes[i] & 0xff) + 0x100, 16).substring(1));
        }		
+=======
+		return user*/;
+		String user_name=user.getUsername();
+>>>>>>> 952d5dd83e003ed5a0d141636b6b330b8eda3aed
 		/*Query query = new Query(Criteria.where("username").is(user_name));
 		System.out.println(user_name);
 		//query.addCriteria(Criteria.where("user_id").is(user_name));
@@ -101,7 +126,11 @@ MongoOperations mongoOperation =
 		DBCollection dbcUser = SpringConfig.db.getCollection("registrationBean");
 		
 		BasicDBObject query = null;
+<<<<<<< HEAD
 		query = new BasicDBObject("username", user_name).append("password", sb.toString());
+=======
+		query = new BasicDBObject("username", user_name);
+>>>>>>> 952d5dd83e003ed5a0d141636b6b330b8eda3aed
 	System.out.println("in post");
 		DBCursor cursor = dbcUser.find(query);
 		//boolean flag = false;
@@ -110,10 +139,20 @@ MongoOperations mongoOperation =
 		}
 		else
 		{
+<<<<<<< HEAD
 			return "";
 		}
 		
 	}
+=======
+			return "Incorrect";
+		}
+		
+	}
+
+	
+	
+>>>>>>> 952d5dd83e003ed5a0d141636b6b330b8eda3aed
 	/*@RequestMapping(value="/LoginController",method=RequestMethod.POST)
 	public String login(@ModelAttribute("userForm") LoginTO user)
 	{
@@ -138,6 +177,7 @@ MongoOperations mongoOperation =
 		return "Success";
 	}*/
 	
+<<<<<<< HEAD
 
 	@RequestMapping(value="/mainapp",method=RequestMethod.POST)
 	@ResponseBody
@@ -164,4 +204,8 @@ MongoOperations mongoOperation =
 		}*/
 		return "";
 	}
+=======
+	
+	
+>>>>>>> 952d5dd83e003ed5a0d141636b6b330b8eda3aed
 }

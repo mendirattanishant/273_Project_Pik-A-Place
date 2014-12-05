@@ -8,6 +8,7 @@
 <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/index.js"></script>
 <script src="//code.jquery.com/jquery-1.10.2.js"></script>
 <title>Pic-A-Place</title>
+<<<<<<< HEAD
 <script type="text/javascript">
 
 function noBack()
@@ -23,6 +24,11 @@ function noBack()
 <body bgcolor="lightblue" background="${pageContext.request.contextPath}/resources/images/instagram-crop.jpg" style="color:black;" onload="if(event.persisted) noBack();">
 <%session.invalidate();
 %>
+=======
+
+</head>
+<body bgcolor="lightblue" background="${pageContext.request.contextPath}/resources/images/instagram-crop.jpg" style="color:black;">
+>>>>>>> 952d5dd83e003ed5a0d141636b6b330b8eda3aed
  <h1 align="center">
 <b>User Registration</b>
 </h1>

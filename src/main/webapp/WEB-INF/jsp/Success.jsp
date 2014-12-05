@@ -1,7 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<<<<<<< HEAD
 <!-- <html>
+=======
+<html>
+>>>>>>> 952d5dd83e003ed5a0d141636b6b330b8eda3aed
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Successful Login</title>
@@ -14,6 +18,7 @@
 <h1>SUCCESS </h1>
 </center>
 </body>
+<<<<<<< HEAD
 </html> -->
 
 <html>
@@ -254,3 +259,6 @@
 <div align="center"> 
 <center><input type="image" src="${pageContext.request.contextPath}/resources/images/facebooklogin.png" style="width:200px;height:50px" onclick="fblogin();"></button></center>
 </div>
+=======
+</html>
+>>>>>>> 952d5dd83e003ed5a0d141636b6b330b8eda3aed

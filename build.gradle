@@ -25,10 +25,14 @@ repositories {
 dependencies {
 compile("org.springframework.boot:spring-boot-starter-web:1.1.6.RELEASE")
    compile 'javax.servlet:jstl'
+<<<<<<< HEAD
    compile 'org.facebook4j:facebook4j-core:2.2.0'
    compile ('com.dropbox.core:dropbox-core-sdk:1.7.7')
    compile("org.webjars:jquery:2.0.3-1")
    compile 'com.fasterxml.jackson.core:jackson-core:2.2.4'
+=======
+   compile("org.webjars:jquery:2.0.3-1")
+>>>>>>> 952d5dd83e003ed5a0d141636b6b330b8eda3aed
    compile 'mysql:mysql-connector-java:5.1.6'
     compile("org.springframework.data:spring-data-mongodb")
    providedRuntime 'org.apache.tomcat.embed:tomcat-embed-jasper'
